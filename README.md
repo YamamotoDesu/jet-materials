@@ -32,3 +32,5 @@ Recently, the Android UI toolkit received a new ViewGroup, to address this issue
 
 This doesn’t quite solve the problem of nested layouts. There are times when you can get better performance by combining simpler ViewGroups rather than using ConstraintLayout.
 
+## [2. Learning Jetpack Compose Fundamentals](https://www.kodeco.com/books/jetpack-compose-by-tutorials/v2.0/chapters/2-learning-jetpack-compose-fundamentals)
+
