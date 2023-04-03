@@ -267,3 +267,5 @@ fun MyAlertDialog() {
   }
 }
 ```
+
+## [3. Building Layout Groups in Compose](https://www.kodeco.com/books/jetpack-compose-by-tutorials/v2.0/chapters/3-building-layout-groups-in-compose)
