@@ -170,3 +170,33 @@ fun MyButton() {
 * shape: Defines the button’s shape and shadow. With MaterialTheme.shapes, you can choose a shape’s size: small, medium or large. Or you can specify a * custom shape as well.
 * border: Draws a border around your button.
 * content: A composable function that displays the content inside the button, usually text.
+
+### RadioButton
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229445659-6312659e-ef17-45fe-9751-e65ba1fc03a1.png">
+
+```kt
+@Composable
+fun MyRadioGroup() {
+  val radioButtons = listOf(0, 1, 2) // 1
+
+  val selectedButton = remember { mutableStateOf(radioButtons.first()) } // 2
+
+  Column {
+    radioButtons.forEach { index -> // 3
+      val isSelected = index == selectedButton.value
+      val colors = RadioButtonDefaults.colors( // 4
+        selectedColor = colorResource(id = R.color.colorPrimary),
+        unselectedColor = colorResource(id = R.color.colorPrimaryDark),
+        disabledColor = Color.LightGray
+      )
+
+      RadioButton( // 5
+        colors = colors,
+        selected = isSelected,
+        onClick = { selectedButton.value = index } // 6
+      )
+    }
+  }
+}
+```
