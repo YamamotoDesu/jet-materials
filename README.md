@@ -75,3 +75,38 @@ fun MyText() {
 * overflow: Determines how the app handles overflow, using either Clip or Ellipsis.
 * maxLines: Sets the maximum number of lines.
 * style: Lets you build a specific style and reuse it, rather than explicitly setting all the other parameters. The current app theme defines the default style, making it easier to support different themes.
+
+### TextField
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229430415-3826365c-fe96-47db-b23c-47a5afd6000d.png">
+
+```kt
+@Composable
+fun TextFieldScreen() {
+  Column(
+      modifier = Modifier.fillMaxSize(),
+      horizontalAlignment = Alignment.CenterHorizontally,
+      verticalArrangement = Arrangement.Center
+  ) {
+    MyTextField()
+  }
+
+  BackButtonHandler {
+    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+  }
+}
+
+@Composable
+fun MyTextField() {
+    val textValue = remember { mutableStateOf("") }
+
+    TextField(
+        value = textValue.value,
+        onValueChange = {
+
+        },
+        label = {})
+}
+```
+
+
