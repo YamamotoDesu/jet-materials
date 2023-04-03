@@ -200,3 +200,21 @@ fun MyRadioGroup() {
   }
 }
 ```
+
+### FloatingActionButton
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229447024-11def30a-a442-4e29-ae47-922f9efe56fa.png">
+
+```kt
+@Composable
+fun MyFloatingActionButton() {
+  FloatingActionButton(
+      onClick = {},
+      backgroundColor = colorResource(id = R.color.colorPrimary),
+      contentColor = Color.White,
+      content = {
+        Icon(Icons.Filled.Favorite, contentDescription = "Test FAB")
+      }
+  )
+}
+```
