@@ -233,3 +233,37 @@ Column(
  LinearProgressIndicator(progress = 0.5f)
 }
 ```
+
+### AlertDialog
+```kt
+@Composable
+fun MyAlertDialog() {
+  val shouldShowDialog = remember { mutableStateOf(true) } // 1
+
+  if (shouldShowDialog.value) { // 2
+    AlertDialog( // 3
+      onDismissRequest = { // 4
+        shouldShowDialog.value = false
+        JetFundamentalsRouter.navigateTo(Screen.Navigation)
+      },
+      // 5
+      title = { Text(text = stringResource(id = R.string.alert_dialog_title)) },
+      text = { Text(text = stringResource(id = R.string.alert_dialog_text)) },
+      confirmButton = { // 6
+        Button(
+          colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.colorPrimary)),
+          onClick = {
+            shouldShowDialog.value = false
+            JetFundamentalsRouter.navigateTo(Screen.Navigation)
+          }
+        ) {
+          Text(
+            text = stringResource(id = R.string.confirm),
+            color = Color.White
+          )
+        }
+      }
+    )
+  }
+}
+```
