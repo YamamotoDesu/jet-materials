@@ -139,4 +139,28 @@ fun MyTextField() {
 
 <img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229438689-fe2acda9-0867-4dd5-8e5d-033036baf495.png">
 
+### Building a Login Button
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229442145-f983083b-dae3-4310-909f-51ea4100e2cb.png">
+
+
+```kt
+@Composable
+fun MyButton() {
+  //TODO add your code here
+    Button(
+        onClick ={},
+        colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.colorPrimary)),
+        border = BorderStroke(
+            1.dp,
+            color = colorResource(id = R.color.colorPrimary),
+        )
+    ) {
+        Text(
+            text = stringResource(id = R.string.button_text),
+            color = Color.White
+        )
+    }
+}
+```
 
