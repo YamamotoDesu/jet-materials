@@ -35,3 +35,44 @@ This doesn’t quite solve the problem of nested layouts. There are times when y
 ## [2. Learning Jetpack Compose Fundamentals](https://www.kodeco.com/books/jetpack-compose-by-tutorials/v2.0/chapters/2-learning-jetpack-compose-fundamentals)
 
 ### TextField
+
+![image](https://user-images.githubusercontent.com/47273077/229427882-24090f01-dcdb-4d47-95e6-fd0ae0b0b399.png)
+
+TextScreen.kt
+```kt
+@Composable
+fun TextScreen() {
+  Column(
+      modifier = Modifier.fillMaxSize(),
+      horizontalAlignment = Alignment.CenterHorizontally,
+      verticalArrangement = Arrangement.Center
+  ) {
+    MyText()
+  }
+
+  BackButtonHandler {
+    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+  }
+}
+
+@Composable
+fun MyText() {
+    //TODO add your code here
+    Text(
+        text = stringResource(id = R.string.jetpack_compose),
+        fontStyle = FontStyle.Italic,
+        color = colorResource(id = R.color.colorPrimary),
+        fontSize = 30.sp,
+        fontWeight = FontWeight.Bold
+    )
+}
+```
+
+* color: Lets you set the text color.
+* fontSize: Changes the font size. You measure it in scalable pixels (sp).
+* fontStyle: Lets you choose between normal and italic font.
+* fontWeight: Sets the weight of the text to Bold, Black, Thin and similar types.
+* textAlign: Sets the horizontal alignment of the text.
+* overflow: Determines how the app handles overflow, using either Clip or Ellipsis.
+* maxLines: Sets the maximum number of lines.
+* style: Lets you build a specific style and reuse it, rather than explicitly setting all the other parameters. The current app theme defines the default style, making it easier to support different themes.
