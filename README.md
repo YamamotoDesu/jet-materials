@@ -35,8 +35,7 @@ This doesn’t quite solve the problem of nested layouts. There are times when y
 ## [2. Learning Jetpack Compose Fundamentals](https://www.kodeco.com/books/jetpack-compose-by-tutorials/v2.0/chapters/2-learning-jetpack-compose-fundamentals)
 
 ### TextField
-
-![image](https://user-images.githubusercontent.com/47273077/229427882-24090f01-dcdb-4d47-95e6-fd0ae0b0b399.png)
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229427882-24090f01-dcdb-4d47-95e6-fd0ae0b0b399.png">
 
 TextScreen.kt
 ```kt
