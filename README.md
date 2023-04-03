@@ -164,3 +164,9 @@ fun MyButton() {
 }
 ```
 
+* onClick: The most common property you’ll use with buttons, this calls a function when the user clicks the button. If you don’t provide onClick, the button will be disabled.
+* enabled: Allows you to control when a button is clickable.
+* elevation: Sets the elevation of a button. The default elevation is 2 dp.
+* shape: Defines the button’s shape and shadow. With MaterialTheme.shapes, you can choose a shape’s size: small, medium or large. Or you can specify a * custom shape as well.
+* border: Draws a border around your button.
+* content: A composable function that displays the content inside the button, usually text.
