@@ -109,4 +109,34 @@ fun MyTextField() {
 }
 ```
 
+### Adding an Email Field With OutlinedTextField
+
+```kt
+@Composable
+fun MyTextField() {
+    val textValue = remember { mutableStateOf("") }
+
+    val primaryColor = colorResource(id = R.color.colorPrimary)
+
+    OutlinedTextField(
+        label = { Text(text = stringResource(id = R.string.email)) },
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            focusedBorderColor = primaryColor,
+            focusedLabelColor = primaryColor,
+            cursorColor = primaryColor
+        ),
+        keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email),
+        value = textValue.value,
+        onValueChange = {
+            textValue.value = it
+        }
+    )
+}
+
+```
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229438646-4375bed6-f959-4cff-b376-38d456bbbcf7.png">
+
+<img width="300" alt="スクリーンショット 2023-04-03 15 26 24" src="https://user-images.githubusercontent.com/47273077/229438689-fe2acda9-0867-4dd5-8e5d-033036baf495.png">
+
 
