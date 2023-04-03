@@ -218,3 +218,18 @@ fun MyFloatingActionButton() {
   )
 }
 ```
+
+## Exploring the Progress Indicators
+```kt
+Column(
+   modifier = Modifier.fillMaxSize(),
+   horizontalAlignment = Alignment.CenterHorizontally,
+   verticalArrangement = Arrangement.Center
+) {
+ CircularProgressIndicator(
+     color = colorResource(id = R.color.colorPrimary),
+     strokeWidth = 5.dp
+ )
+ LinearProgressIndicator(progress = 0.5f)
+}
+```
